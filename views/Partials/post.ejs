@@ -1,0 +1,19 @@
+<%- include("header.ejs") %>
+<div class="body">
+    <h1>Post a Blog</h1>
+    <form class="form-body" action="/submit" method="POST">
+        <div class="row1">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="topic" id="topic" placeholder="Topic">
+        </div>
+        <div class="row2">
+            <input type="text" name="title" id="title" placeholder="Title">
+        </div>
+        <div class="row3">
+            <textarea name="content" id="content" cols="50" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="submit">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

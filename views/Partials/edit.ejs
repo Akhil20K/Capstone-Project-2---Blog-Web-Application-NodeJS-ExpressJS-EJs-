@@ -1,0 +1,27 @@
+<%- include("header.ejs") %>
+<div class="body">
+    <h1>Edit Blogs</h1>
+    <% if(locals.blogs && blogs.length > 0){ %>
+        <% for(var i=0; i<blogs.length; i++) { %>
+            <div class="eblog">
+                <div class="er1">
+                    <a href="./<%= i.toString() %>"><h3><b>Title:<%= blogs[i].title %></b></h3></a>
+                    <p>Author: <%= blogs[i].name %></p>
+                </div>
+                <div class="er1">
+                    <p>Topic:<%= blogs[i].topic %></p>
+                    <p>Date:<%= blogs[i].date %></p>
+                </div>
+                <a href="./edit/<%= i.toString() %>"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAxJJREFUSEuVV+uZ4jAMHKUSrpKDSvZSybKVhKuEXCVLJZ5DtmLLLz42P3gERyONRg8EegkAxpf49eeXPduZmN1PkHYJBPwRdOfvAGcWkwPO+DHw8QM+pNnnOV/epswIDuS596o2qomxMw8ReeivJE8EPgQ4A9gB/E2/1UidbQb+gWDr/I4omgrRt2jH3m4ish6gADYC5nQ8oQ5dFLzlqMIg+Q3gVG66uOqTavQmi6zqgUYKYoPESNWrByTbeQC8iCyRlUPP+SMZziDuxt8VxD8XWUfCIrJrMTBQHVWWEigQHWLg5/PLNd8zZgqwZT0wKEV3O3iRRfYsNA/rOIuR1qCa71/HcZJqTx2q7idxmSGSeqAAi+ytKDJPBAJ5Ek9vce4qi3xFvahTKVu3RWQ9OkUS10vgcaiDSG8W2aEP/a7Alm+uiyx7Atae4a5YQjHH0UVVopaDu5KHCZQbIYd6b4ssa9BcS2RMhXYoX9W8iiy774yujgVdjgdU+0jbcorBkZ/P+9cUEbV+11EAFdXWNLocx1Zq6iWwWXNI6nVKJS2niSMtoRTpoMlVVI/FlazEkkmNpZRMCxqFlptGjtTsokQuqFrmTNVkUMFoYzEvUp26kknqzZFiPUrR2UyaOQaJZ6EDjnUsIIOflwN6uZmStFv5SLVvfxutl9hwzLvXOV5kZ6hquwdNdWw5TaBHb6ifjS0zV8kkx6WcZnmv1atCKpFaqaouzgTufcRNHXsQAomauptpXhXkQ5uDDaxCbzNjX4m1F1cZElEMzcOumZh6aUKqO01KeQhnQOrytDxMWqZR3ec4NaTUORy947VpHvELqm14a8RaSm4+59Dy1tEG68qsGjqVqrtyaqieGR1OreZwHfFI1X46FWATUr2BjPeRehdy+L+fn49FoBo6bTnpVNENZERtsdehz9aj8ojo5Tb3bstMy56uLJJH2wzx5TZWHlIRfomIzud8DTfYuaDeoT338yj/t6bTXEjNL92Ye+dfyGivbjpOxUf1d8oABufLrZkxNx3sn8p7gXb23va2rjx77D9difY0AhT0AwAAAABJRU5ErkJggg=="/></a>
+                <form action="./delete/<%= i.toString() %>?_method=DELETE" method="POST" class="edit-delete">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <br>
+        <% } %>
+    <% } else{ %>
+        <div class="no-blogs">
+            <h2>No Blogs</h2>
+        </div>
+    <% } %>
+</div>

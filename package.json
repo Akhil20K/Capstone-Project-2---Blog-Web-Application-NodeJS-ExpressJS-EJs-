@@ -1,0 +1,27 @@
+{
+  "name": "cp3---blog-web-app",
+  "version": "1.0.0",
+  "description": "Capstone Project 3 - Blog Web Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akhil20K/Capstone-Project-2---Blog-Web-Application-NodeJS-ExpressJS-EJs-.git"
+  },
+  "author": "Akhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akhil20K/Capstone-Project-2---Blog-Web-Application-NodeJS-ExpressJS-EJs-/issues"
+  },
+  "homepage": "https://github.com/Akhil20K/Capstone-Project-2---Blog-Web-Application-NodeJS-ExpressJS-EJs-#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "method-override": "^3.0.0",
+    "node": "^22.9.0"
+  }
+}

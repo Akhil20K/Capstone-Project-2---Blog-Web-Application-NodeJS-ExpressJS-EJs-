@@ -1,0 +1,16 @@
+<%- include("header.ejs") %>
+<div class="body">
+    <% if(locals.blog){ %>
+        <h1><%= blog.title %></h1>
+        <div class="blog-body">
+            <div class="rr1">
+                <p>Author: <%= blog.name %></p>
+                <p>Topic: <%= blog.topic %></p>
+                <p>Date: <%= blog.date %></p>
+            </div>
+            <div class="r2">
+                <p><%= blog.content %></p>
+            </div>
+        </div>
+    <% } %>
+</div>

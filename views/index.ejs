@@ -1,0 +1,23 @@
+<%- include("Partials/header.ejs") %>
+<div class="body">
+    <h1>Blogs</h1>
+    <% if(locals.blogs && blogs.length > 0){ %>
+        <% for(var i=0; i<blogs.length; i++) { %>
+            <div class="blog">
+                <div class="r1">
+                    <a href="./<%= i.toString() %>"><h3><b>Title:<%= blogs[i].title %></b></h3></a>
+                    <p>Author: <%= blogs[i].name %></p>
+                    <p>Date:<%= blogs[i].date %></p>
+                </div>
+                <div class="r2">
+                    <p>Topic:<%= blogs[i].topic %></p>
+                </div>
+            </div>
+            <br>
+        <% } %>
+    <% } else{ %>
+        <div class="no-blogs">
+            <h2>No Blogs</h2>
+        </div>
+    <% } %>
+</div>
